@@ -7,7 +7,7 @@ Given a collection of numbers that might contain duplicates, return all possible
  NOTE : No 2 entries in the permutation sequence should be the same. Warning : DO NOT USE LIBRARY FUNCTION FOR GENERATING PERMUTATIONS. Example : next_permutations in C++ / itertools.permutations in python. If you do, we will disqualify your submission retroactively and give you penalty points.
 */
 
-
+/* Recursive function */
 void find_permute(vector<int> &A, vector<vector<int>> &result, map<vector<int>,int> &hash, int idx){
     if(idx==A.size()){
         if(hash.find(A)==hash.end())
@@ -25,11 +25,11 @@ void find_permute(vector<int> &A, vector<vector<int>> &result, map<vector<int>,i
 
 }
 
+/* Main Function */
 vector<vector<int> > Solution::permute(vector<int> &A) {
     vector<vector<int>> result;
     map<vector<int>,int> hash;
     int idx=0;
     find_permute(A,result,hash,idx);
-    //sort(result.begin(),result.end());
     return result;
 }
