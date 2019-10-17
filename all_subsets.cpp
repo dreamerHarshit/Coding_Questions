@@ -16,7 +16,7 @@ Example : If S = [1,2,3], a solution is:
   [2],
   [2, 3],
   [3],
-]
+] where [] is blank set and for n elements 2^n possible sets are  formed. 
 */
 
 void find_subset(vector<int> &A, vector<vector<int>> &result, vector<int> &aux, int i){
