@@ -2,6 +2,7 @@
 #include <set>
 #include <algorithm>
 #include <functional>
+#include <iostream>
  
 int main() 
 {
